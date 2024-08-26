@@ -18,6 +18,7 @@ body {
   overflow-x: hidden;
 }
 
+
 /* App Container */
 .App {
   margin: 2rem auto;
@@ -59,9 +60,9 @@ body {
 }
 
 .characters-con li:hover {
-  transform: scale(1.05);
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 8px 16px rgba(234, 49, 211);
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 8px 16px rgba(234, 49, 211, 0.5), 0 0 20px rgba(234, 49, 211, 0.5);
 }
 
 .characters-con li::before {
@@ -99,17 +100,56 @@ body {
 @keyframes runningBorder {
   0% {
     border-color: rgba(240, 36, 208) transparent transparent transparent;
+    box-shadow: 0 0 8px rgba(240, 36, 208, 0.7);
   }
   25% {
     border-color: transparent rgba(134, 38, 199) transparent transparent;
+    box-shadow: 0 0 8px rgba(134, 38, 199, 0.7);
   }
   50% {
     border-color: transparent transparent rgba(240, 36, 208) transparent;
+    box-shadow: 0 0 8px rgba(240, 36, 208, 0.7);
   }
   75% {
     border-color: transparent transparent transparent rgba(139, 12, 227);
+    box-shadow: 0 0 8px rgba(139, 12, 227, 0.7);
   }
   100% {
     border-color: rgba(240, 36, 208) transparent transparent transparent;
+    box-shadow: 0 0 8px rgba(240, 36, 208, 0.7);
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .characters-con {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .logo img {
+      width: 60%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .characters-con {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .SoundsBtn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .App {
+      padding: 0.5rem;
+  }
+
+  .logo img {
+      width: 50%;
   }
 }
