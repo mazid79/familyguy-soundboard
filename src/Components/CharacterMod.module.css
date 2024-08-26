@@ -4,8 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
     padding: 1rem;
     font-weight: 4rem;
     border-radius: 12px;
@@ -46,8 +44,6 @@
   
 .NameCon {
     display: flex;
-    width: 100%;
-    max-width: 600px;
     align-items: center;
     justify-content: center;
     margin-top: 0.5rem;
