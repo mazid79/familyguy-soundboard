@@ -52,16 +52,29 @@ body {
 }
 
 .characters-con li {
-  border-radius: 12px;
-  overflow: hidden;
   position: relative;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .characters-con li:hover {
   transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.characters-con li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid transparent; /* Initial border is transparent */
+  animation: runningBorder 4s linear infinite; /* Run animation */
+  box-sizing: border-box; /* Ensure border doesn't affect element size */
 }
 
 .characters-con .characters {
@@ -79,53 +92,24 @@ body {
   filter: brightness(0.9);
 }
 
-/* Active Character Highlight */
-.active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-}
 
-.active::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 5px solid #ffdde1;
-  border-top-color: transparent;
-  animation: spin 1s linear infinite, border-run 2s linear infinite;
-}
 
-@keyframes border-run {
+
+
+@keyframes runningBorder {
   0% {
-    border-color: purple transparent transparent transparent;
+    border-color: red transparent transparent transparent;
   }
   25% {
-    border-color: transparent purple transparent transparent;
+    border-color: transparent red transparent transparent;
   }
   50% {
-    border-color: transparent transparent purple transparent;
+    border-color: transparent transparent red transparent;
   }
   75% {
-    border-color: transparent transparent transparent purple;
+    border-color: transparent transparent transparent red;
   }
   100% {
-    border-color: purple transparent transparent transparent;
-  }
-}
-
-/* Spin Animation */
-@keyframes spin {
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    border-color: red transparent transparent transparent;
   }
 }
