@@ -5,15 +5,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #ffdde1;
+  background: #d9a7c7;
 }
 
 /* Gradient Background for Body */
 body {
-  background: linear-gradient(135deg, #ee9ca7 0%, #ffdde1 100%);
+  background: linear-gradient(177.9deg, rgb(255, 228, 254) 5.3%, rgb(255, 228, 254) 5.3%, rgb(188, 132, 173) 94.7%);
   font-size: 1.2rem;
   font-family: 'Cubano';
   color: white;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -35,7 +36,6 @@ body {
 
 .logo img {
   width: 40%;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease-in-out;
 }
 
@@ -60,8 +60,8 @@ body {
 
 .characters-con li:hover {
   transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 8px 16px rgba(234, 49, 211);
 }
 
 .characters-con li::before {
@@ -71,9 +71,9 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
-  border: 3px solid transparent; /* Initial border is transparent */
-  animation: runningBorder 4s linear infinite; /* Run animation */
+  border-radius: 5px;
+  border: 2px solid transparent; /* Initial border is transparent */
+  animation: runningBorder 7s linear infinite; /* Run animation */
   box-sizing: border-box; /* Ensure border doesn't affect element size */
 }
 
@@ -98,18 +98,18 @@ body {
 
 @keyframes runningBorder {
   0% {
-    border-color: red transparent transparent transparent;
+    border-color: rgba(240, 36, 208) transparent transparent transparent;
   }
   25% {
-    border-color: transparent red transparent transparent;
+    border-color: transparent rgba(134, 38, 199) transparent transparent;
   }
   50% {
-    border-color: transparent transparent red transparent;
+    border-color: transparent transparent rgba(240, 36, 208) transparent;
   }
   75% {
-    border-color: transparent transparent transparent red;
+    border-color: transparent transparent transparent rgba(139, 12, 227);
   }
   100% {
-    border-color: red transparent transparent transparent;
+    border-color: rgba(240, 36, 208) transparent transparent transparent;
   }
 }
