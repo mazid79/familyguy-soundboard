@@ -1,0 +1,68 @@
+/* CharacterMod.module.css */
+
+.SoundsCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Sounds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .Sounds p {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .Sounds p span {
+    color: #2C94D6;
+  }
+  
+  .SoundsBtn {
+    background: #d9a7c7;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .SoundsBtn:hover {
+    background: #ffc524;
+    color: #141414;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .NameCon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .NameCon h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+  }
+  
